@@ -1,5 +1,7 @@
-public class Exits{
-    public Exits(String name, String exitDesc, String direction, Room exitTo, Boolean isLocked, Item key, String lockDesc){
+package com.example.cyoaengine;
+
+public class Exits {
+    public Exits(String name, String exitDesc, String direction, Room exitTo, Boolean isLocked, Item key, String lockDesc) {
         this.name = name;
         this.exitDesc = exitDesc;
         this.direction = direction;
@@ -8,7 +10,8 @@ public class Exits{
         this.key = key;
         this.lockDesc = lockDesc;
     }
-    public Exits(String name, String exitDesc, String direction, Room exitTo){
+
+    public Exits(String name, String exitDesc, String direction, Room exitTo) {
         this.name = name;
         this.exitDesc = exitDesc;
         this.direction = direction;
@@ -18,13 +21,13 @@ public class Exits{
         this.lockDesc = null;
     }
 
-    public void unlock(Item key){
-        if(this.key == key){
+    public void unlock(Item key) {
+        if (this.key == key) {
             this.isLocked = false;
         }
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
@@ -36,13 +39,13 @@ public class Exits{
         return lockDesc;
     }
 
-    public String lock(String lockDesc, Item key){
-        if(this.key != null){
-            if(this.key == key){
+    public String lock(String lockDesc, Item key) {
+        if (this.key != null) {
+            if (this.key == key) {
                 this.isLocked = true;
                 this.lockDesc = lockDesc;
                 return "The door is now locked";
-            }else{
+            } else {
                 return "This key doesn't fit this door";
             }
         }
