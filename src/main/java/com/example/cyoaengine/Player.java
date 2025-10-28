@@ -27,6 +27,14 @@ public class Player {
 
     private String name;
     private List<Item> inventory;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     // Need to implement a way to track clues/hints and add them to the player
     // I'm tempted to add solved puzzles and other small details as well
     // That way the player class can be saved as a almost progress class

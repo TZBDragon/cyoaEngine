@@ -1,6 +1,13 @@
 package com.example.cyoaengine;
 
 public class Exits {
+    private String name;
+    private String exitDesc;
+    private String direction;
+    private Room exitTo;
+    private Boolean isLocked;
+    private Item key;
+    private String lockDesc;
     public Exits(String name, String exitDesc, String direction, Room exitTo, Boolean isLocked, Item key, String lockDesc) {
         this.name = name;
         this.exitDesc = exitDesc;
@@ -75,12 +82,28 @@ public class Exits {
         return exitTo;
     }
 
-    private String name;
-    private String exitDesc;
-    private String direction;
-    private Room exitTo;
-    private Boolean isLocked;
-    private Item key;
-    private String lockDesc;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setExitDesc(String exitDesc) {
+        this.exitDesc = exitDesc;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
+    }
+
+    public void setExitTo(Room exitTo) {
+        this.exitTo = exitTo;
+    }
+
+    public void setKey(Item key) {
+        this.key = key;
+    }
+
+    public void setLockDesc(String lockDesc) {
+        this.lockDesc = lockDesc;
+    }
 
 }

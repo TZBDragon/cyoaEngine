@@ -26,4 +26,44 @@ public class NeedsItem extends Interactable{
         }
         return "That doesn't seem like the correct item";
     }
+
+    public Item getRequired() {
+        return required;
+    }
+
+    public void setRequired(Item required) {
+        this.required = required;
+    }
+
+    public String getSuccessText() {
+        return successText;
+    }
+
+    public void setSuccessText(String successText) {
+        this.successText = successText;
+    }
+
+    public boolean isLockOrExit() {
+        return lockOrExit;
+    }
+
+    public void setLockOrExit(boolean lockOrExit) {
+        this.lockOrExit = lockOrExit;
+    }
+
+    public Exits getConnectedExit() {
+        return connectedExit;
+    }
+
+    public void setConnectedExit(Exits connectedExit) {
+        this.connectedExit = connectedExit;
+    }
+
+    public Lock getConnectedLock() {
+        return connectedLock;
+    }
+
+    public void setConnectedLock(Lock connectedLock) {
+        this.connectedLock = connectedLock;
+    }
 }
